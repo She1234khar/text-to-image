@@ -58,8 +58,11 @@ backend:
 Create a .env file in server folder and add:
 
 MONGODB_URI=<your-mongodb-connection-string>
+
 JWT_SECRET=<your-jwt-secret>
+
 CLIPDROP_API=<your-clipdrop-api-key>
+
 
 fronted:.env
 
