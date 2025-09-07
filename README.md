@@ -85,7 +85,7 @@ npm run dev
 ## 📸 Screenshots  
 
 ### 🏠 Home Page  
-![Home](https://github.com/She1234khar/text-to-image/blob/main/Screenshot%202025-09-08%20001541.png?raw=true)
+![Home](https://github.com/She1234khar/text-to-image/blob/main/Screenshot%202025-09-07%20234718.png?raw=true)
 
 ### 🏠 Image-Generate  
 ![Image](https://github.com/She1234khar/text-to-image/blob/main/Screenshot%202025-09-07%20234852.png?raw=true)
