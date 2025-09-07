@@ -1,8 +1,8 @@
 # 🛒 AI-powered image generation SaaS web  
 
-![Stars](https://img.shields.io/github/stars/She1234khar/Imagify?style=social)  
-![Forks](https://img.shields.io/github/forks/She1234khar/Imagify?style=social)  
-![Issues](https://img.shields.io/github/issues/She1234khar/Imagify)  
+![Stars](https://img.shields.io/github/stars/She1234khar/text-to-image?style=social)  
+![Forks](https://img.shields.io/github/forks/She1234khar/text-to-image?style=social)  
+![Issues](https://img.shields.io/github/issues/She1234khar/text-to-image)  
 
 An AI-powered image generation SaaS web application built with the MERN stack.
 Imagify uses the Clipdrop API to generate high-quality images and provides secure authentication with a modern UI.
@@ -31,7 +31,7 @@ API: Clipdrop API
 
 ### 1️⃣ Clone the Repository
 
-git clone https://github.com/She1234khar/Imagify.git
+git clone https://github.com/She1234khar/text-to-image.git
 
 cd Imagify
 
@@ -78,6 +78,32 @@ npm run server
 Frontend:
 
 npm run dev
+
+## 📸 Screenshots  
+
+### 🏠 Home Page  
+![Home](https://github.com/She1234khar/text-to-image/blob/main/Screenshot%202025-09-08%20001541.png?raw=true)
+
+### 🏠 Image-Generate  
+![Image](https://github.com/She1234khar/text-to-image/blob/main/Screenshot%202025-09-07%20234852.png?raw=true)
+![Image1](https://github.com/She1234khar/text-to-image/blob/main/Screenshot%202025-09-07%20234812.png?raw=true)
+
+
+### 🏠 Plan 
+![Plan](https://github.com/She1234khar/text-to-image/blob/main/Screenshot%202025-09-08%20001336.png?raw=true)
+
+
+🚀 Deployment
+
+1) Frontend: Vercel
+
+2) Backend: Render / Vercel
+
+3) Database: MongoDB Atlas
+
+
+
+
 
 
  
