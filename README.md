@@ -7,7 +7,7 @@
 An AI-powered image generation SaaS web application built with the MERN stack.
 Imagify uses the Clipdrop API to generate high-quality images and provides secure authentication with a modern UI.
 
-🔗 **Live Demo:** [Click Here](https://imagify-shozab.vercel.app/) 
+🔗 **Live Demo:** [Click Here](https://text-to-image-bssw.onrender.com) 
 
 ✨ Features
 
