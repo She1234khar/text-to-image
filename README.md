@@ -1,8 +1,5 @@
 # 🛒 AI-powered image generation SaaS web  
-
-![Stars](https://img.shields.io/github/stars/She1234khar/text-to-image?style=social)  
-![Forks](https://img.shields.io/github/forks/She1234khar/text-to-image?style=social)  
-![Issues](https://img.shields.io/github/issues/She1234khar/text-to-image)  
+  
 
 An AI-powered image generation SaaS web application built with the MERN stack.
 Imagify uses the Clipdrop API to generate high-quality images and provides secure authentication with a modern UI.
