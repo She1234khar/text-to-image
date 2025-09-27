@@ -92,6 +92,9 @@ npm run dev
 ### 🏠 Plan 
 ![Plan](https://github.com/She1234khar/text-to-image/blob/main/Screenshot%202025-09-27%20215439.png?raw=true)
 
+### 🏠 DashBoard
+![DashBoard](https://github.com/She1234khar/text-to-image/blob/main/Screenshot%202025-09-27%20215542.png?raw=true)
+
 
 🚀 Deployment
 
