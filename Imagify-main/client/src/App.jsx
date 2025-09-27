@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Result from "./pages/Result";
 import BuyCredit from "./pages/BuyCredit";
+import Dashboard from "./pages/Dashboard";
+import CreditHistory from "./pages/CreditHistory";
 import Navbar from './components/Navbar'
 import Footer from "./components/Footer";
 import Login from "./components/Login";
@@ -21,6 +23,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/result" element={<Result />} />
         <Route path="/buy" element={<BuyCredit />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/history" element={<CreditHistory />} />
       </Routes>
       <Footer/>
     </div>

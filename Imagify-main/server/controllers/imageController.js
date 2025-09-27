@@ -1,4 +1,5 @@
 import userModel from "../models/userModel.js";
+import imageModel from "../models/imageModel.js";
 import FormData from "form-data";
 import axios from "axios";
 
@@ -39,6 +40,14 @@ const generateImage = async (req, res) => {
       creditBalance: user.creditBalance - 1,
     });
 
+    // Save image to database
+    const newImage = new imageModel({
+      userId: user._id,
+      prompt: prompt,
+      imageUrl: resultImage
+    });
+    await newImage.save();
+
     res.json({
       success: true,
       message: "Image generated",
@@ -51,4 +60,20 @@ const generateImage = async (req, res) => {
   }
 };
 
-export default generateImage;
+const getUserImages = async (req, res) => {
+  try {
+    const userId = req.body.userId;
+    
+    const images = await imageModel.find({ userId }).sort({ createdAt: -1 });
+    
+    res.json({
+      success: true,
+      images: images
+    });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: error.message });
+  }
+};
+
+export { generateImage, getUserImages };

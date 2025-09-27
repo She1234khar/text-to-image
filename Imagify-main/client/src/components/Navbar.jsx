@@ -17,20 +17,34 @@ const Navbar = () => {
         {user ? (
           <div className="flex items-center justify-center text-center gap-2 sm:gap-3">
             <button
-              className="flex items-center gap-2 bg-blue-100 px-4 sm:px-6 py-1.5 sm:py-3 rounded-full hover:scale-105 transition"
               onClick={() => navigate("/buy")}
+              className="flex items-center gap-2 bg-blue-100 px-4 sm:px-6 py-1.5 sm:py-3 rounded-full hover:scale-105 transition"
             >
               <img src={assets.credit_star} className="w-5" />
               <p className="text-xs sm:text-sm font-md text-gray-600">
                 Credits left : {credit}
               </p>
             </button>
+            <button
+              onClick={() => navigate("/dashboard")}
+              className="text-gray-600 hover:text-gray-800 transition-colors max-sm:hidden"
+            >
+              Dashboard
+            </button>
+            <button
+              onClick={() => navigate("/history")}
+              className="text-gray-600 hover:text-gray-800 transition-colors max-sm:hidden"
+            >
+              History
+            </button>
             <p className="text-gray-600 max-sm:hidden pl-4">Hi, {user.name}</p>
             <div className="relative group">
               <img src={assets.profile_icon} className="w-10 drop-shadow" />
               <div className="absolute hidden group-hover:block top-0 right-0 z-10 text-black rounded pt-12">
                 <ul className="list-none m-0 p-2 bg-white rounded-md border text-sm">
-                  <li onClick={logout} className="px-2 py-1 cursor-pointer pr-10">Logout</li>
+                  <li onClick={() => navigate("/dashboard")} className="px-2 py-1 cursor-pointer pr-10 hover:bg-gray-100">Dashboard</li>
+                  <li onClick={() => navigate("/history")} className="px-2 py-1 cursor-pointer pr-10 hover:bg-gray-100">History</li>
+                  <li onClick={logout} className="px-2 py-1 cursor-pointer pr-10 hover:bg-gray-100">Logout</li>
                 </ul>
               </div>
             </div>

@@ -8,6 +8,11 @@ const registerUser = async (req, res) => {
     if (!name || !email || !password) {
       return res.json({ success: false, message: "Missing Details" });
     }
+    // Check if email already exists to avoid duplicate key error
+    const existing = await userModel.findOne({ email });
+    if (existing) {
+      return res.json({ success: false, message: "Email already registered" });
+    }
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
     const userData = {
@@ -20,6 +25,10 @@ const registerUser = async (req, res) => {
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
     res.json({ success: true, token: token, user: { name: user.name } });
   } catch (error) {
+    // Handle duplicate key error gracefully
+    if (error && (error.code === 11000 || error?.errorResponse?.code === 11000)) {
+      return res.json({ success: false, message: "Email already registered" });
+    }
     console.log(error);
     res.json({ success: false, message: error.message });
   }
@@ -62,4 +71,27 @@ const userCredits = async (req, res) => {
   }
 };
 
-export { registerUser, loginUser, userCredits };
+const buyCredits = async (req, res) => {
+  try {
+    const { userId, credits } = req.body;
+    const creditsToAdd = Number(credits);
+    if (!userId || !creditsToAdd || creditsToAdd <= 0) {
+      return res.json({ success: false, message: "Invalid credit purchase request" });
+    }
+
+    const user = await userModel.findById(userId);
+    if (!user) {
+      return res.json({ success: false, message: "User not found" });
+    }
+
+    user.creditBalance = (user.creditBalance || 0) + creditsToAdd;
+    await user.save();
+
+    res.json({ success: true, message: "Credits added", credits: user.creditBalance });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: error.message });
+  }
+};
+
+export { registerUser, loginUser, userCredits, buyCredits };
