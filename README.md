@@ -90,7 +90,7 @@ npm run dev
 
 
 ### 🏠 Plan 
-![Plan](https://github.com/She1234khar/text-to-image/blob/main/Screenshot%202025-09-08%20001336.png?raw=true)
+![Plan](https://github.com/She1234khar/text-to-image/blob/main/Screenshot%202025-09-27%20215439.png?raw=true)
 
 
 🚀 Deployment
